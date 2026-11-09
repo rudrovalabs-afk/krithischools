@@ -437,3 +437,132 @@ table.fees td.amt { font-weight: 700; color: var(--green-800); font-family: var(
 .mt-s { margin-top: 14px; } .mt-m { margin-top: 26px; } .mt-l { margin-top: 44px; }
 .divider-leaf { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--gold-500); margin: 6px 0 2px; }
 .divider-leaf::before, .divider-leaf::after { content:""; height: 1px; width: 44px; background: var(--line); }
+
+/* ============================================================
+   v2 VISUAL REFRESH — premium + playful + colourful + visual
+   (appended overrides; cascade wins over earlier rules)
+   ============================================================ */
+:root{
+  --sky:#1f9ed4; --sky-050:#e8f6fc;
+  --coral:#ff6a45; --coral-050:#fff0ec;
+  --violet:#7c5cff; --violet-050:#efebff;
+  --radius:22px; --radius-sm:14px; --radius-lg:34px;
+  --shadow: 0 16px 40px -18px rgba(9,40,22,.22);
+  --shadow-lg: 0 40px 80px -24px rgba(9,40,22,.34);
+}
+
+/* ---- Playful pill eyebrow ---- */
+.eyebrow{
+  background: rgba(13,107,56,.08); color: var(--green-700);
+  padding: .5em 1em; border-radius: 999px; font-size: .74rem;
+}
+.eyebrow::before{ display:none; }
+.hero .eyebrow, .page-hero .eyebrow, .cta-band .eyebrow, .message .eyebrow,
+.hero__badge{ background: rgba(255,255,255,.16); color: var(--gold-400); }
+
+/* ---- Heading underline accent (centered heads) ---- */
+.section-head.center h2::after{
+  content:""; display:block; width:66px; height:5px; border-radius:6px;
+  margin: 18px auto 0; background: linear-gradient(90deg, var(--green-600), var(--gold-500));
+}
+
+/* ---- HERO: bolder + decorative colour blobs ---- */
+.hero__inner{ min-height: min(92vh, 840px); }
+.hero h1{ font-size: clamp(2.6rem, 6.2vw, 4.7rem); letter-spacing: -.02em; }
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(420px 420px at 88% 8%, rgba(239,192,90,.28), transparent 60%),
+    radial-gradient(360px 360px at 6% 92%, rgba(31,158,212,.22), transparent 60%);
+}
+.hero__badge{ border:1px solid rgba(255,255,255,.25); }
+.hero__card{ border-radius: var(--radius-lg); }
+.hero__fact b{ font-size: 1.8rem; }
+
+/* floating accent dots on hero card */
+.hero__card{ position: relative; }
+.hero__card::after{
+  content:""; position:absolute; width:74px; height:74px; right:-18px; bottom:-18px;
+  background: var(--coral); border-radius: 24px; z-index:-1; opacity:.9;
+  transform: rotate(12deg);
+}
+
+/* ---- Colourful feature icon tiles ---- */
+.features .feature:nth-child(6n+1) .feature__icon{ background: var(--green-050); color: var(--green-700); }
+.features .feature:nth-child(6n+2) .feature__icon{ background: var(--gold-050);  color: var(--gold-600); }
+.features .feature:nth-child(6n+3) .feature__icon{ background: var(--sky-050);   color: var(--sky); }
+.features .feature:nth-child(6n+4) .feature__icon{ background: var(--coral-050); color: var(--coral); }
+.features .feature:nth-child(6n+5) .feature__icon{ background: var(--violet-050); color: var(--violet); }
+.features .feature:nth-child(6n+6) .feature__icon{ background: var(--sky-050);   color: var(--sky); }
+.feature__icon{ border-radius: 18px; }
+.feature:hover{ box-shadow: 0 26px 54px -20px rgba(13,107,56,.30); }
+
+/* colourful info-card icons too */
+.card-grid-3 .info-card:nth-child(6n+2) .feature__icon{ background: var(--gold-050); color: var(--gold-600); }
+.card-grid-3 .info-card:nth-child(6n+3) .feature__icon{ background: var(--sky-050); color: var(--sky); }
+.card-grid-3 .info-card:nth-child(6n+4) .feature__icon{ background: var(--coral-050); color: var(--coral); }
+.card-grid-3 .info-card:nth-child(6n+5) .feature__icon{ background: var(--violet-050); color: var(--violet); }
+.card-grid-3 .info-card:nth-child(6n+6) .feature__icon{ background: var(--sky-050); color: var(--sky); }
+
+/* ---- Rounder, punchier cards & media ---- */
+.stat, .feature, .program, .info-card, .form-card, .testi, .step, .table-wrap{ border-radius: var(--radius); }
+.split__media img{ border-radius: var(--radius-lg); }
+.program__img{ }
+.stat:hover{ box-shadow: 0 24px 50px -20px rgba(13,107,56,.28); }
+.program:hover{ box-shadow: 0 26px 54px -20px rgba(13,107,56,.28); }
+
+/* playful coloured program tags */
+.program:nth-child(4n+1) .program__tag{ color: var(--green-700); }
+.program:nth-child(4n+2) .program__tag{ color: var(--sky); }
+.program:nth-child(4n+3) .program__tag{ color: var(--coral); }
+.program:nth-child(4n+4) .program__tag{ color: var(--gold-600); }
+
+/* ---- Stats: colourful, playful ---- */
+.stats .stat{ border:none; background: #fff; }
+.stats .stat:nth-child(1){ background: linear-gradient(160deg,#fff, var(--green-050)); }
+.stats .stat:nth-child(2){ background: linear-gradient(160deg,#fff, var(--sky-050)); }
+.stats .stat:nth-child(3){ background: linear-gradient(160deg,#fff, var(--coral-050)); }
+.stats .stat:nth-child(4){ background: linear-gradient(160deg,#fff, var(--gold-050)); }
+.stats .stat:nth-child(2) b{ color: var(--sky); }
+.stats .stat:nth-child(3) b{ color: var(--coral); }
+.stats .stat:nth-child(4) b{ color: var(--gold-600); }
+
+/* ---- Trust strip: softer, rounded, floating ---- */
+.trust{ background: var(--green-800); }
+.trust .container{ padding-block: 26px; }
+
+/* ---- Buttons: slightly rounder, bouncier ---- */
+.btn{ border-radius: 999px; }
+.btn--gold{ box-shadow: 0 10px 24px -10px rgba(227,171,60,.7); }
+.btn--wa{ box-shadow: 0 10px 24px -10px rgba(30,169,82,.6); }
+
+/* ---- Decorative blob on soft sections ---- */
+.bg-green-soft, .bg-cream{ position: relative; overflow: hidden; }
+.bg-green-soft::before{
+  content:""; position:absolute; width:300px; height:300px; right:-80px; top:-80px;
+  background: radial-gradient(circle, rgba(31,158,212,.10), transparent 70%); border-radius:50%;
+  pointer-events:none;
+}
+.bg-cream::after{
+  content:""; position:absolute; width:260px; height:260px; left:-70px; bottom:-70px;
+  background: radial-gradient(circle, rgba(239,192,90,.14), transparent 70%); border-radius:50%;
+  pointer-events:none;
+}
+
+/* ---- Split badges rounder ---- */
+.split__badge{ border-radius: 18px; }
+
+/* ---- CTA band: rounder + colour edge ---- */
+.cta-band{ border-radius: var(--radius-lg); }
+.cta-band::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background: radial-gradient(300px 300px at 90% 10%, rgba(239,192,90,.3), transparent 60%);
+}
+
+/* ---- Gallery: rounder tiles ---- */
+.gallery-grid figure{ border-radius: 18px; }
+
+/* ---- Messages / testimonials rounder ---- */
+.message{ border-radius: var(--radius-lg); }
+
+/* reduce motion safety already handled above */
