@@ -566,3 +566,20 @@ table.fees td.amt { font-weight: 700; color: var(--green-800); font-family: var(
 .message{ border-radius: var(--radius-lg); }
 
 /* reduce motion safety already handled above */
+
+/* ============================================================
+   Real school photos — framed "memories" (kept small = sharp)
+   ============================================================ */
+.memories{ display:grid; grid-template-columns:repeat(4,1fr); gap:26px; }
+@media(max-width:860px){ .memories{ grid-template-columns:repeat(2,1fr); gap:18px; } }
+@media(max-width:420px){ .memories{ grid-template-columns:1fr; } }
+.memory{
+  background:#fff; padding:12px 12px 14px; border-radius:16px;
+  box-shadow:var(--shadow); cursor:pointer; transition:transform .3s, box-shadow .3s;
+}
+.memory img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px; display:block; background:var(--paper-2); }
+.memory figcaption{ text-align:center; font-family:var(--serif); font-weight:600; font-size:.92rem; color:var(--ink-soft); margin-top:11px; }
+.memory:nth-child(odd){ transform:rotate(-1.1deg); }
+.memory:nth-child(even){ transform:rotate(1.1deg); }
+.memory:hover{ transform:rotate(0) translateY(-5px); box-shadow:var(--shadow-lg); z-index:2; }
+.memory__tag{ display:inline-block; font-size:.66rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green-700); background:var(--green-050); padding:.2em .6em; border-radius:999px; margin-top:9px; }
