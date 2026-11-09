@@ -285,7 +285,7 @@ body.nav-open .nav__toggle span::after  { top: 0; transform: rotate(-45deg); }
 /* Lightbox */
 .lightbox { position: fixed; inset: 0; background: rgba(5,20,12,.92); display: none; align-items: center; justify-content: center; z-index: 200; padding: 24px; opacity: 0; transition: opacity .3s; }
 .lightbox.open { display: flex; opacity: 1; }
-.lightbox img { max-width: 92vw; max-height: 86vh; border-radius: 10px; box-shadow: var(--shadow-lg); }
+.lightbox img { max-width: min(92vw, 1040px); max-height: min(86vh, 780px); width: auto; height: auto; border-radius: 10px; box-shadow: var(--shadow-lg); }
 .lightbox__close, .lightbox__nav { position: absolute; color: #fff; background: rgba(255,255,255,.12); border-radius: 50%; width: 52px; height: 52px; display: grid; place-items: center; font-size: 1.6rem; transition: background .2s; }
 .lightbox__close:hover, .lightbox__nav:hover { background: rgba(255,255,255,.26); }
 .lightbox__close { top: 20px; right: 20px; }
