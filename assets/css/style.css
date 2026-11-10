@@ -743,3 +743,89 @@ h1,h2{ letter-spacing:-.025em; }
 .hero5__card p{ color:rgba(255,255,255,.84); font-size:.92rem; margin-bottom:18px; }
 .hero5__card .btn{ width:100%; }
 @media(max-width:900px){ .hero5__inner{ grid-template-columns:1fr; gap:26px; } .hero5__card{ display:none; } }
+
+/* ============================================================
+   v6 PREMIUM POLISH — restraint, refinement, consistency
+   (final layer; disciplined green + gold only)
+   ============================================================ */
+:root{
+  --ink:#16261c; --ink-soft:#43544a; --muted:#78877d; --line:#e8eae4;
+  --shadow-sm:0 1px 2px rgba(16,38,25,.04), 0 6px 16px -10px rgba(16,38,25,.12);
+  --shadow:0 24px 60px -30px rgba(16,38,25,.22);
+  --shadow-lg:0 48px 100px -36px rgba(16,38,25,.30);
+  --radius:20px; --radius-sm:14px; --radius-lg:30px;
+}
+body{ color:var(--ink); }
+.section{ padding:clamp(76px,11vw,140px) 0; }
+h2{ font-weight:600; }
+.lead,.lead2{ color:var(--ink-soft); }
+
+/* — Eyebrow: refined gold label, no pill — */
+.eyebrow{ background:transparent!important; border:0!important; padding:0!important;
+  color:var(--gold-600); font-weight:700; letter-spacing:.2em; font-size:.74rem;
+  display:inline-flex; align-items:center; gap:.65em; text-transform:uppercase; }
+.eyebrow::before{ content:""; display:inline-block; width:22px; height:2px; background:var(--gold-500); border-radius:2px; }
+.center .eyebrow::before, .section-head.center .eyebrow::before{ display:none; }
+.page-hero .eyebrow, .cta-band .eyebrow, .message .eyebrow{ color:var(--gold-400)!important; }
+.section-head.center h2::after{ background:var(--gold-500); width:48px; height:3px; }
+
+/* — Discipline the icon tiles: green + gold only — */
+.feature__icon{ background:var(--green-050)!important; color:var(--green-700)!important; border-radius:14px; }
+.features .feature:nth-child(3n+2) .feature__icon,
+.card-grid-3 .info-card:nth-child(3n+2) .feature__icon,
+.card-grid-2 .info-card:nth-child(2n) .feature__icon{ background:var(--gold-050)!important; color:var(--gold-600)!important; }
+
+/* — Clean, premium stat cards (no tints) — */
+.stats .stat{ background:#fff!important; border:1px solid var(--line)!important; box-shadow:var(--shadow-sm); padding:32px 18px; border-radius:var(--radius); }
+.stats .stat b, .stats .stat:nth-child(2) b, .stats .stat:nth-child(3) b, .stats .stat:nth-child(4) b{ color:var(--green-800)!important; font-size:clamp(2.3rem,4vw,3.1rem); }
+.stats .stat b .suffix{ color:var(--gold-500)!important; }
+.stats .stat span{ color:var(--muted); font-weight:600; }
+
+/* — Elegant memories: straight, consistent — */
+.memory{ transform:none!important; border:1px solid var(--line); box-shadow:var(--shadow-sm); padding:10px 10px 6px; border-radius:16px; }
+.memory:hover{ transform:translateY(-6px)!important; box-shadow:var(--shadow); }
+.memory img{ border-radius:10px; }
+.memory figcaption{ color:var(--ink-soft); font-style:normal; font-weight:600; font-size:.9rem; letter-spacing:.01em; }
+
+/* — Remove amateur decorative blobs — */
+.bg-green-soft::before, .bg-cream::after, .cta-band::before, .hero2::before{ display:none!important; }
+
+/* — Cards: hairline + soft shadow, refined hover — */
+.feature, .program, .info-card, .testi, .form-card, .step, .table-wrap{ border:1px solid var(--line); box-shadow:var(--shadow-sm); border-radius:var(--radius); }
+.feature:hover, .program:hover, .info-card:hover{ box-shadow:var(--shadow); border-color:var(--line); transform:translateY(-5px); }
+.feature::before{ display:none; }
+
+/* — Buttons: solid & refined (kill shine gimmick) — */
+.btn::after{ display:none!important; }
+.btn{ border-radius:999px; font-weight:700; letter-spacing:.005em; }
+.btn--gold{ box-shadow:0 12px 26px -14px rgba(200,144,43,.7); }
+
+/* — Marquee: subtle, refined separators — */
+.marquee{ background:var(--green-900); }
+.marquee__track{ padding:13px 0; gap:40px; }
+.marquee__track span{ font-weight:600; font-size:.9rem; letter-spacing:.04em; color:#dcefe2; text-transform:uppercase; }
+.marquee__track .star{ color:var(--gold-500); font-size:.7em; }
+
+/* — Motto ribbon: quieter — */
+.motto-ribbon b{ font-size:1.08rem; }
+
+/* — Hero pill: readable filled chip — */
+.hero5 .pill{ background:rgba(255,255,255,.16)!important; border:1px solid rgba(255,255,255,.3)!important; backdrop-filter:blur(6px); letter-spacing:.02em; }
+
+/* — Program cards: consistent imagery — */
+.program__img{ aspect-ratio:4/3; }
+.program__body{ padding:22px 22px 26px; }
+
+/* — Split image: consistent ratio — */
+.split__media img{ aspect-ratio:4/3; }
+
+/* — Topbar: quieter, refined — */
+.topbar{ font-size:.82rem; }
+
+/* unify program tags to brand green/gold (discipline) */
+.program .program__tag,
+.program:nth-child(4n+1) .program__tag,
+.program:nth-child(4n+2) .program__tag,
+.program:nth-child(4n+3) .program__tag,
+.program:nth-child(4n+4) .program__tag{ color:var(--green-700)!important; }
+.program:nth-child(2n) .program__tag{ color:var(--gold-600)!important; }
