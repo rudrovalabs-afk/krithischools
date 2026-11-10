@@ -829,3 +829,12 @@ h2{ font-weight:600; }
 .program:nth-child(4n+3) .program__tag,
 .program:nth-child(4n+4) .program__tag{ color:var(--green-700)!important; }
 .program:nth-child(2n) .program__tag{ color:var(--gold-600)!important; }
+
+/* hero logo + motto lockup (brand badge on the sliding photos) */
+.hero5__lockup{ display:inline-flex; align-items:center; gap:14px; margin-bottom:24px;
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(8px); padding:9px 20px 9px 9px; border-radius:999px; }
+.hero5__logo{ width:52px; height:52px; border-radius:50%; object-fit:cover; background:#fff; flex:none; box-shadow:0 6px 16px rgba(0,0,0,.25); }
+.hero5__lockup-txt b{ display:block; font-family:var(--serif); font-style:italic; color:var(--gold-400); font-size:1.04rem; line-height:1.15; }
+.hero5__lockup-txt span{ display:block; font-size:.76rem; color:rgba(255,255,255,.82); letter-spacing:.02em; margin-top:1px; }
+@media(max-width:420px){ .hero5__lockup{ padding:8px 16px 8px 8px; gap:11px; } .hero5__logo{ width:44px; height:44px; } .hero5__lockup-txt b{ font-size:.95rem; } }
