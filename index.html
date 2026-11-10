@@ -62,33 +62,39 @@
   <div class="nav-backdrop"></div>
 </header>
 
-<!-- ===== Hero ===== -->
-<section class="hero2">
-  <div class="container hero2__inner">
-    <div class="hero2__copy">
-      <span class="pill"><span class="dot"></span> CBSE · English Medium · Since 2012</span>
-      <h1>Where every child learns to <em>shine</em></h1>
-      <p class="lead2">A nurturing, values-driven CBSE school for the young learners of Chilakaluripet &amp; Guntur — from Pre-KG to Class 10.</p>
-      <div class="btn-row">
-        <a class="btn btn--gold btn--lg" href="pages/admissions.html">Apply for Admission</a>
-        <a class="btn btn--wa btn--lg" href="https://wa.me/918142701791?text=Hello%20Krithi%20International%20School%2C%20I%20would%20like%20admission%20details." target="_blank" rel="noopener">WhatsApp Us</a>
+<!-- ===== Hero (dynamic sliding photo background) ===== -->
+<section class="hero5">
+  <div class="hero5__slides" aria-hidden="true">
+    <div class="hero__slide is-active" style="background-image:url('assets/img/stock/indian-kids.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('assets/img/stock/class-session.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('assets/img/stock/indian-hands-up.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('assets/img/stock/kid-learning.jpg')"></div>
+  </div>
+  <div class="container">
+    <div class="hero5__inner">
+      <div class="hero5__copy">
+        <span class="pill"><span class="dot"></span> CBSE · English Medium · Since 2012</span>
+        <h1>Where every child learns to <em>shine</em></h1>
+        <p class="lead2">A nurturing, values-driven CBSE school for the young learners of Chilakaluripet &amp; Guntur — from Pre-KG to Class 10.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold btn--lg" href="pages/admissions.html">Apply for Admission</a>
+          <a class="btn btn--wa btn--lg" href="https://wa.me/918142701791?text=Hello%20Krithi%20International%20School%2C%20I%20would%20like%20admission%20details." target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+        <div class="hero2__chips">
+          <span>Pre-KG to Class 10</span>
+          <span>Safe Transport</span>
+          <span>Individual Attention</span>
+        </div>
       </div>
-      <div class="hero2__chips">
-        <span>Pre-KG to Class 10</span>
-        <span>Safe Transport</span>
-        <span>Individual Attention</span>
-      </div>
-    </div>
-    <div class="hero2__gallery">
-      <div class="hg hg--main"><img src="assets/img/stock/indian-kids.jpg" alt="Happy students of Krithi International School"></div>
-      <div class="hg hg--a"><img src="assets/img/stock/kid-learning.jpg" alt="A Krithi student with his book"></div>
-      <div class="hg hg--b"><img src="assets/img/stock/happy-child.jpg" alt="Young learners in uniform"></div>
-      <div class="hero2__badge">
-        <div class="dotg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 6 7 .8-5 4.7L18.8 21 12 17.3 5.2 21 6.9 13.5l-5-4.7L9 8z"/></svg></div>
-        <div><span class="n">13+ yrs</span><small>Nurturing young minds</small></div>
-      </div>
+      <aside class="hero5__card">
+        <span class="k">Admissions Open</span>
+        <strong>2026–27</strong>
+        <p>Now welcoming Pre-KG to Class 10. Limited seats — book a campus visit today.</p>
+        <a class="btn btn--gold" href="pages/admissions.html">Enquire Now</a>
+      </aside>
     </div>
   </div>
+  <div class="hero__dots" aria-hidden="true"></div>
 </section>
 
 <!-- Motto ribbon -->
@@ -406,9 +412,5 @@
 </div>
 
 <script src="assets/js/main.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
-<script src="assets/js/animations.js" defer></script>
 </body>
 </html>

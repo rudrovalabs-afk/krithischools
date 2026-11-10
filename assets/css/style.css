@@ -717,3 +717,29 @@ h1,h2{ letter-spacing:-.025em; }
 @media (prefers-reduced-motion: reduce){
   .hero2::before, .marquee__track{ animation:none; }
 }
+
+/* ============================================================
+   v5 — DYNAMIC full-bleed hero (sliding photo background)
+   ============================================================ */
+.hero5{ position:relative; color:#fff; overflow:hidden; isolation:isolate; display:flex; align-items:center; min-height:min(94vh,880px); }
+.hero5__slides{ position:absolute; inset:0; z-index:-2; overflow:hidden; }
+.hero5::after{ content:""; position:absolute; inset:0; z-index:-1;
+  background:
+    linear-gradient(100deg, rgba(6,47,27,.93) 0%, rgba(8,62,35,.80) 44%, rgba(6,47,27,.46) 100%),
+    linear-gradient(0deg, rgba(4,30,17,.62), rgba(4,30,17,0) 48%);
+}
+.hero5__inner{ display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:center; width:100%; padding:clamp(72px,10vw,124px) 0; }
+.hero5 .pill{ background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.26); color:#fff; box-shadow:none; }
+.hero5 .pill .dot{ background:var(--gold-400); box-shadow:0 0 0 4px rgba(239,192,90,.25); }
+.hero5 h1{ color:#fff; font-size:clamp(2.7rem,6vw,4.9rem); margin:20px 0 18px; }
+.hero5 h1 em{ color:var(--gold-400); font-style:italic; }
+.hero5 .lead2{ color:rgba(255,255,255,.92); max-width:50ch; margin-bottom:28px; }
+.hero5 .hero2__chips{ margin-top:24px; }
+.hero5 .hero2__chips span{ background:rgba(255,255,255,.13); border-color:rgba(255,255,255,.22); color:#fff; }
+.hero5 .hero2__chips span::before{ color:var(--gold-400); }
+.hero5__card{ background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); backdrop-filter:blur(12px); border-radius:var(--radius-lg); padding:28px; box-shadow:var(--shadow-lg); }
+.hero5__card .k{ font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-400); font-weight:700; }
+.hero5__card strong{ display:block; font-family:var(--serif); font-size:2.4rem; color:#fff; line-height:1; margin:6px 0 8px; }
+.hero5__card p{ color:rgba(255,255,255,.84); font-size:.92rem; margin-bottom:18px; }
+.hero5__card .btn{ width:100%; }
+@media(max-width:900px){ .hero5__inner{ grid-template-columns:1fr; gap:26px; } .hero5__card{ display:none; } }
