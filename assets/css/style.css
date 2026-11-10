@@ -577,3 +577,101 @@ table.fees td.amt { font-weight: 700; color: var(--green-800); font-family: var(
 .memory:nth-child(even){ transform:rotate(1.1deg); }
 .memory:hover{ transform:rotate(0) translateY(-5px); box-shadow:var(--shadow-lg); z-index:2; }
 .memory__tag{ display:inline-block; font-size:.66rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green-700); background:var(--green-050); padding:.2em .6em; border-radius:999px; margin-top:9px; }
+
+/* ============================================================
+   v3 PREMIUM — modern school-site design language
+   ============================================================ */
+:root{
+  --shadow-sm: 0 2px 6px -2px rgba(9,40,22,.08), 0 1px 2px rgba(9,40,22,.05);
+  --shadow: 0 18px 44px -20px rgba(9,40,22,.20), 0 6px 14px -8px rgba(9,40,22,.08);
+  --shadow-lg: 0 44px 90px -30px rgba(9,40,22,.32), 0 12px 24px -12px rgba(9,40,22,.12);
+  --radius: 24px; --radius-sm: 16px; --radius-lg: 34px;
+  --maxw: 1240px;
+}
+h1,h2{ letter-spacing:-.025em; }
+.section{ padding: clamp(64px,10vw,124px) 0; }
+.section-head{ margin-bottom: clamp(34px,5vw,60px); }
+.lead,.lead2{ font-size: clamp(1.06rem,1.55vw,1.24rem); }
+
+/* refined nav */
+.site-header{ background: rgba(251,250,246,.82); }
+.site-header.scrolled{ background: rgba(251,250,246,.94); }
+.nav__links a{ font-size:.94rem; }
+.brand__text strong{ letter-spacing:-.02em; }
+
+/* ---------- Premium light hero ---------- */
+.hero2{
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(1000px 560px at 88% -8%, var(--gold-050), transparent 60%),
+    radial-gradient(760px 540px at -8% 112%, var(--green-050), transparent 58%),
+    var(--cream);
+  padding: clamp(36px,6vw,84px) 0 clamp(60px,9vw,120px);
+}
+.hero2__inner{ display:grid; grid-template-columns:1.02fr .98fr; gap:clamp(30px,5vw,68px); align-items:center; }
+.hero2 .pill{
+  display:inline-flex; align-items:center; gap:.55em; background:#fff; border:1px solid var(--line);
+  color:var(--green-700); font-weight:700; font-size:.8rem; padding:.55em 1.05em; border-radius:999px;
+  box-shadow:var(--shadow-sm); letter-spacing:.01em;
+}
+.hero2 .pill .dot{ width:8px;height:8px;border-radius:50%;background:var(--gold-500); box-shadow:0 0 0 4px var(--gold-050); }
+.hero2 h1{ font-size:clamp(2.7rem,5.9vw,4.7rem); line-height:1.03; margin:22px 0 18px; color:var(--ink); }
+.hero2 h1 em{ font-style:italic; color:var(--gold-600); }
+.hero2 .lead2{ color:var(--ink-soft); max-width:46ch; margin-bottom:28px; }
+.hero2 .btn-row{ gap:12px; }
+.hero2__chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.hero2__chips span{
+  display:inline-flex; align-items:center; gap:.45em; font-size:.85rem; font-weight:600; color:var(--ink-soft);
+  background:#fff; border:1px solid var(--line); padding:.5em .95em; border-radius:999px;
+}
+.hero2__chips span::before{ content:"✓"; color:var(--green-600); font-weight:800; }
+
+.hero2__gallery{
+  position:relative;
+  display:grid; grid-template-columns:1fr 1fr;
+  grid-template-rows: clamp(190px,25vw,270px) clamp(150px,19vw,210px);
+  gap:16px;
+}
+.hero2__gallery .hg{ border-radius:26px; overflow:hidden; box-shadow:var(--shadow); position:relative; }
+.hero2__gallery .hg img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s ease; }
+.hero2__gallery .hg:hover img{ transform:scale(1.06); }
+.hero2__gallery .hg--main{ grid-row:1 / span 2; border-radius:30px; }
+.hero2__badge{
+  position:absolute; left:-12px; bottom:-20px; background:#fff; border-radius:22px;
+  box-shadow:var(--shadow-lg); padding:15px 20px; display:flex; align-items:center; gap:14px;
+  animation: floaty 5s ease-in-out infinite;
+}
+@keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+.hero2__badge .n{ font-family:var(--serif); font-size:1.7rem; color:var(--green-700); line-height:1; display:block; }
+.hero2__badge small{ color:var(--muted); font-size:.78rem; }
+.hero2__badge .dotg{ width:46px;height:46px;border-radius:14px;background:var(--gold-050);color:var(--gold-600);display:grid;place-items:center; flex:none; }
+.hero2__badge svg{ width:24px;height:24px; }
+@media(max-width:900px){
+  .hero2__inner{ grid-template-columns:1fr; }
+  .hero2__gallery{ max-width:560px; margin-top:8px; }
+}
+@media(prefers-reduced-motion: reduce){ .hero2__badge{ animation:none; } }
+
+/* ---------- Motto ribbon ---------- */
+.motto-ribbon{ background:linear-gradient(90deg,var(--gold-050),#fffdf7 50%,var(--gold-050)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.motto-ribbon .container{ display:flex; align-items:center; justify-content:center; gap:16px; padding:15px 0; text-align:center; flex-wrap:wrap; }
+.motto-ribbon b{ font-family:var(--serif); font-style:italic; font-size:1.14rem; color:var(--green-800); }
+.motto-ribbon span{ font-size:.92rem; color:var(--muted); }
+.motto-ribbon .sep{ width:6px;height:6px;border-radius:50%;background:var(--gold-500); }
+
+/* ---------- Premium card refinements ---------- */
+.feature, .program, .info-card, .stat, .testi, .form-card{ border:1px solid rgba(9,40,22,.06); }
+.feature:hover, .program:hover, .info-card:hover, .stat:hover{ border-color:transparent; }
+.section-head.center h2::after{ height:4px; width:56px; }
+.btn--lg{ padding:1.05em 2em; }
+
+/* program cards taller image + cleaner */
+.program__img{ aspect-ratio:3/2.4; }
+.program h3{ font-size:1.24rem; }
+
+/* ---- nav fit refinements (v3) ---- */
+.nav{ gap:14px; }
+.nav__links{ gap:2px; }
+.nav__links a{ white-space:nowrap; padding:.55em .7em; font-size:.92rem; }
+.nav__cta .btn--gold{ white-space:nowrap; padding:.72em 1.4em; }
+@media (max-width:1120px) and (min-width:981px){ .nav__links a{ padding:.5em .55em; font-size:.88rem; } }
