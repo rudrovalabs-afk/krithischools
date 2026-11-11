@@ -905,3 +905,10 @@ h2{ font-weight:600; }
 /* widen the nav bar, reduce side whitespace */
 .site-header .nav{ max-width:1500px; margin-inline:auto; padding-inline:clamp(20px,2.4vw,44px); justify-content:flex-start; gap:clamp(16px,2.2vw,36px); }
 .site-header .nav__cta{ margin-left:auto; }
+
+/* v12 — shorter hero so the bottom marquee shows within the first screen */
+.hero5{ min-height:min(80vh,720px) !important; }
+
+/* v12b — compact hero so marquee is in frame */
+.hero5{ min-height:min(72vh,640px) !important; }
+.hero5__inner{ padding-block:clamp(40px,6vw,74px) !important; }
