@@ -869,3 +869,19 @@ h2{ font-weight:600; }
     radial-gradient(86% 76% at 50% 45%, rgba(4,23,13,.52) 0%, rgba(4,23,13,.24) 52%, transparent 78%),
     linear-gradient(180deg, rgba(5,32,18,.38) 0%, rgba(4,24,14,.74) 100%) !important;
 }
+
+/* v9 — slide-1 brand layer: logo left + big motto right + school quote */
+.hero5__brand{ position:absolute; inset:0; z-index:3; display:flex; align-items:center; opacity:0; visibility:hidden; transition:opacity .9s ease; pointer-events:none; }
+.hero5.is-brand .hero5__brand{ opacity:1; visibility:visible; }
+.hero5.is-brand .hero5__copy{ opacity:0; visibility:hidden; }
+.hero5__copy{ transition:opacity .6s ease; }
+.hero5__brandinner{ display:flex; align-items:center; gap:clamp(28px,5vw,70px); text-align:left; width:100%; }
+.hero5__brandlogo{ width:clamp(150px,19vw,250px); height:clamp(150px,19vw,250px); object-fit:cover; background:#fff; border-radius:50%; padding:6px; box-shadow:var(--shadow-lg); flex:none; }
+.hero5__brandtext{ max-width:640px; }
+.hero5__brandtext b{ display:block; font-family:var(--serif); font-style:italic; color:var(--gold-400); font-size:clamp(2.1rem,5vw,3.9rem); line-height:1.06; text-shadow:0 2px 24px rgba(0,0,0,.4); }
+.hero5__brandtext > span{ display:block; color:rgba(255,255,255,.88); font-size:clamp(1.02rem,1.7vw,1.3rem); margin-top:10px; }
+.hero5__brandtext p{ color:#fff; font-family:var(--serif); font-style:italic; font-size:clamp(1.05rem,1.6vw,1.3rem); margin-top:22px; padding-left:18px; border-left:3px solid var(--gold-500); max-width:46ch; }
+@media(max-width:760px){
+  .hero5__brandinner{ flex-direction:column; text-align:center; gap:22px; }
+  .hero5__brandtext p{ border-left:0; padding-left:0; margin-inline:auto; }
+}
