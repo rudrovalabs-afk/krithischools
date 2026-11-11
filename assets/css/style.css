@@ -903,5 +903,5 @@ h2{ font-weight:600; }
 .about-stat small{ display:block; font-size:.8rem; color:var(--muted); font-weight:600; margin-top:3px; letter-spacing:.01em; }
 
 /* widen the nav bar, reduce side whitespace */
-.site-header .nav{ max-width:none; padding-inline:clamp(20px,2.4vw,52px); justify-content:flex-start; gap:clamp(16px,2.2vw,36px); }
+.site-header .nav{ max-width:1500px; margin-inline:auto; padding-inline:clamp(20px,2.4vw,44px); justify-content:flex-start; gap:clamp(16px,2.2vw,36px); }
 .site-header .nav__cta{ margin-left:auto; }
