@@ -895,3 +895,13 @@ h2{ font-weight:600; }
     radial-gradient(82% 74% at 50% 46%, rgba(4,23,13,.5) 0%, rgba(4,23,13,.2) 50%, transparent 76%),
     linear-gradient(180deg, rgba(5,32,18,.3) 0%, rgba(4,24,14,.64) 100%) !important;
 }
+
+/* v11 — about-section history stats + wider navbar */
+.about-stats{ display:flex; gap:32px; margin:22px 0 4px; flex-wrap:wrap; }
+.about-stat b{ font-family:var(--serif); font-size:2rem; color:var(--green-700); line-height:1; display:inline-block; }
+.about-stat b .suffix{ color:var(--gold-500); }
+.about-stat small{ display:block; font-size:.8rem; color:var(--muted); font-weight:600; margin-top:3px; letter-spacing:.01em; }
+
+/* widen the nav bar, reduce side whitespace */
+.site-header .nav{ max-width:none; padding-inline:clamp(20px,2.4vw,52px); justify-content:flex-start; gap:clamp(16px,2.2vw,36px); }
+.site-header .nav__cta{ margin-left:auto; }
