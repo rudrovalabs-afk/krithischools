@@ -37,8 +37,6 @@
   if (slides.length > 1) {
     const dotsWrap = $(".hero__dots");
     let i = 0, timer;
-    const heroEl = document.querySelector(".hero5");
-    const syncBrand = () => { if (heroEl) heroEl.classList.toggle("is-brand", i === 0); };
     if (dotsWrap) {
       slides.forEach((_, idx) => {
         const b = document.createElement("button");
@@ -55,10 +53,8 @@
       i = (n + slides.length) % slides.length;
       slides[i].classList.add("is-active");
       if (dots[i]) dots[i].classList.add("is-active");
-      syncBrand();
     }
     function restart() { clearInterval(timer); timer = setInterval(() => go(i + 1), 5500); }
-    syncBrand();
     restart();
   }
 
