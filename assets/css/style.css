@@ -848,3 +848,24 @@ h2{ font-weight:600; }
 .hero5__inner{ grid-template-columns:1fr !important; }
 .hero5__copy{ max-width:720px; text-shadow:0 2px 24px rgba(0,0,0,.4); }
 .hero5 h1, .hero5 .lead2{ text-shadow:0 2px 26px rgba(0,0,0,.42); }
+
+/* v8 — centered, balanced hero */
+.hero5{ text-align:center; }
+.hero5__inner{ justify-items:center; }
+.hero5__copy{ margin:0 auto; max-width:820px; display:flex; flex-direction:column; align-items:center; }
+.hero5 h1{ text-align:center; }
+.hero5 .lead2{ margin-left:auto; margin-right:auto; }
+.hero5 .btn-row{ justify-content:center; }
+.hero5__chips{ justify-content:center; }
+.hero5::after{
+  background:
+    linear-gradient(180deg, rgba(5,32,18,.46) 0%, rgba(5,30,17,.6) 55%, rgba(4,24,14,.8) 100%),
+    radial-gradient(120% 90% at 50% 42%, transparent 40%, rgba(4,24,14,.35) 100%) !important;
+}
+
+/* v8b — center-darkening overlay for legible centered text */
+.hero5::after{
+  background:
+    radial-gradient(86% 76% at 50% 45%, rgba(4,23,13,.52) 0%, rgba(4,23,13,.24) 52%, transparent 78%),
+    linear-gradient(180deg, rgba(5,32,18,.38) 0%, rgba(4,24,14,.74) 100%) !important;
+}
